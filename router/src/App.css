@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #a3b8ff;
+  --bg2: #ffffff;
+  --bg3: #e1eaff;
+  --bg4: #f3f7ff;
+  --text: #fff;
+  --text2: #737373;
+  --hover: #3a80dc;
+  --scroll: #373737;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scrollbar-color: var(--bg3) var(--scroll);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--bg2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 1rem 2rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: var(--text);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+ul li {
+  font-weight: bold;
+  padding-right: 2rem;
+  transition: color 0.3s ease;
+}
+
+ul li:hover {
+  color: var(--hover);
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: var(--hover);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--scroll);
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+p {
+  color: var(--scroll);
+}
+
+.title:hover {
+  transition: color 0.3s ease;
+  cursor: pointer;
+  color: var(--hover);
+}
+
+.comment {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.post {
+  font-size: 13px;
+  color: var(--text2);
+}
+
+article {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: var(--bg3);
+  border-radius: 12px;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.more {
+  display: block;
+  margin-left: auto;
+  margin-right: 10rem;
+}
+
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 30px;
+  background-color: var(--text);
+  border-radius: 12px;
+  flex: 1;
+}
+
+.mess {
+  background-color: var(--bg4);
+  margin: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 2rem;
+}
+
+.mess h3 {
+  margin-left: 2rem;
+  color: var(--bg);
+}
+
+.mess p {
+  margin-left: 3.5rem;
+}
+
+.text {
+  margin: 0;
+  padding: 1rem;
+}
+
+.comment-message {
+  margin-top: 0.5rem;
+}
+
+form label {
+  margin-top: 0.5rem;
+  color: var(--scroll);
+  display: block;
+  font-weight: bold;
+}
+
+form .message {
+  margin-top: 0.5rem;
+  color: var(--scroll);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  background-color: var(--text);
+  border: 1px solid var(--text2);
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+.message {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--bg);
+}
+
+button {
+  background-color: var(--bg);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+
+footer {
+  color: var(--text);
+  background-color: var(--bg);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dark {
+  --bg: #000000;
+  --bg2: #414040;
+  --bg3: #656565;
+  --text: #f9f6f6;
+  --text2: #f8f8f8;
+  --hover: #3a80dc;
+  --scroll: #faf9f9;
+
+  background-color: var(--bg2);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg2);
+}
+
+.dark article {
+  background-color: var(--bg3);
+}
+
+form {
+  background-color: var(--bg3);
+} 
+
+label,
+.message {
+  color: var(--text);
+}
+
+input,
+textarea {
+  background-color: var(--bg2);
+  border: 1px solid var(--bg);
+}
+
+.dark footer {
+  background-color: var(--bg);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  article {
+    padding: 25px 15px;
+  }
+
+  form {
+    padding: 20px;
+    margin: 1rem auto;
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .comment {
+    font-size: 1.2rem;
+  }
+}
